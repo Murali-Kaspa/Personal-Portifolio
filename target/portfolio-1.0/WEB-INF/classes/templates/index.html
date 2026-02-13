@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Murali Krishna | DevOps Engineer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+    body { background: #0b1120; color: #e5e7eb; line-height: 1.6; }
+
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 8%; background: #020617; border-bottom: 1px solid #1f2937;
+      position: sticky; top: 0; z-index: 1000;
+    }
+
+    header h1 { font-size: 22px; font-weight: 600; color: #38bdf8; }
+
+    nav a { margin-left: 20px; text-decoration: none; color: #cbd5e1; font-weight: 500; transition: 0.3s; }
+    nav a:hover { color: #38bdf8; }
+
+    .hero {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+      padding: 90px 8%; gap: 50px;
+    }
+
+    .hero-text { max-width: 520px; }
+    .hero-text h2 { font-size: 42px; margin-bottom: 10px; }
+    .hero-text span { color: #38bdf8; }
+    .hero-text p { margin: 20px 0; color: #94a3b8; }
+
+    .social-icons a {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 42px; height: 42px; border-radius: 50%;
+      background: #111827; color: #e5e7eb; margin-right: 12px; font-size: 18px;
+      transition: 0.3s; text-decoration: none;
+    }
+
+    .social-icons a:hover { background: #38bdf8; color: #020617; transform: translateY(-4px); }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #38bdf8;
+      color: #020617;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      background: #0ea5e9;
+      transform: translateY(-2px);
+    }
+
+    .profile {
+      width: 260px; height: 260px; border-radius: 50%; overflow: hidden;
+      border: 4px solid #38bdf8;
+    }
+
+    .profile img { width: 100%; height: 100%; object-fit: cover; }
+
+    section { padding: 70px 8%; }
+    .section-title { font-size: 30px; margin-bottom: 35px; text-align: center; color: #38bdf8; }
+
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 22px; text-align: center;
+    }
+
+    .skill-item {
+      background: #020617; border: 1px solid #1f2937;
+      padding: 22px; border-radius: 14px; transition: 0.3s;
+    }
+
+    .skill-item:hover { transform: translateY(-8px); border-color: #38bdf8; }
+    .skill-item img { width: 48px; margin-bottom: 10px; }
+
+    .cards {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: #020617; border: 1px solid #1f2937;
+      padding: 26px; border-radius: 16px; transition: 0.35s;
+    }
+
+    .card:hover { transform: translateY(-10px); border-color: #38bdf8; }
+    .card a { color: #38bdf8; text-decoration: none; font-weight: 500; }
+
+    footer {
+      text-align: center; padding: 35px;
+      background: #020617; border-top: 1px solid #1f2937;
+      font-size: 14px; color: #94a3b8;
+    }
+
+    .footer-social a { margin: 0 12px; color: #94a3b8; font-size: 20px; transition: 0.3s; }
+    .footer-social a:hover { color: #38bdf8; }
+
+    @media (max-width: 768px) {
+      .hero-text h2 { font-size: 32px; }
+      header { flex-direction: column; gap: 10px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Murali Krishna</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="about">
+  <div class="hero-text">
+    <h2>Hi, I'm <span>Murali Krishna</span></h2>
+    <p>
+      DevOps Engineer with <strong>4+ years of experience</strong> in cloud infrastructure,
+      CI/CD automation, containerization, and Kubernetes orchestration.
+      Passionate about building scalable, secure, and highly available systems.
+    </p>
+
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/murali-krishna-kaspa-352a29191/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/Murali-Kaspa" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:murali.kaspa26@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <!-- Resume Download Button -->
+    <a href="/resume/Murali_Krishna_DevOps_Resume.pdf" download class="download-btn">
+      ⬇ Download Resume
+    </a>
+  </div>
+
+  <div class="profile">
+    <img src="https://res.cloudinary.com/dikjlrkwb/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1770820610/ChatGPT_Image_Feb_11_2026_08_06_36_PM_c3ezkq.png" alt="Profile Picture">
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="section-title">DevOps Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"><p>Jenkins</p></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"><p>GitHub</p></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"><p>Docker</p></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"><p>Kubernetes</p></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"><p>Terraform</p></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"><p>AWS</p></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg"><p>ArgoCD</p></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sonarqube/sonarqube-original.svg"><p>SonarQube</p></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"><p>Jira</p></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="cards">
+
+    <div class="card">
+      <p>End-to-End CI/CD Pipeline with Jenkins, SonarQube, Docker, and EKS</p>
+      <a href="https://github.com/Murali-Kaspa/ARGO-CD-APP-deployment.git">View Project →</a>
+    </div>
+
+    <div class="card">
+      <p>Portfolio Deployment using ECR, EKS, ArgoCD</p>
+      <a href="https://github.com/Murali-Kaspa/portifolio.git">View Project →</a>
+    </div>
+
+    <div class="card">
+      <p>Infrastructure Automation using Terraform and Real Scenario Questions</p>
+      <a href="https://github.com/Murali-Kaspa/Terraform_Complete_Prep.git">View Project →</a>
+    </div>
+
+    <div class="card">
+      <p>End-to-End DevSecOps Application Deployment</p>
+      <a href="https://github.com/Murali-Kaspa/Camping-DevSecops-Project.git">View Project →</a>
+    </div>
+
+    <div class="card">
+      <p>Starbucks Application deployed on Kubernetes using Argo CD GitOps.</p>
+      <a href="https://github.com/Murali-Kaspa/Starbucks-Project-DevSecops.git">View Project →</a>
+    </div>
+
+  </div>
+</section>
+
+<footer id="contact">
+  <p>© 2026 Murali Krishna • DevOps Engineer</p>
+
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/in/murali-krishna-kaspa-352a29191/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://github.com/Murali-Kaspa" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="mailto:murali.kaspa26@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
+</footer>
+
+</body>
+</html>
+
