@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ahh! Error | Application Failure</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #020617, #0f172a, #020617);
+      color: #e5e7eb;
+      text-align: center;
+    }
+
+    .error-box {
+      background: #020617;
+      border: 1px solid #1f2937;
+      padding: 40px 50px;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(56, 189, 248, 0.2);
+      max-width: 500px;
+      width: 90%;
+    }
+
+    .error-code {
+      font-size: 72px;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .error-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .error-message {
+      font-size: 15px;
+      color: #94a3b8;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .home-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #38bdf8;
+      color: #020617;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .home-btn:hover {
+      background: #0ea5e9;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="error-box">
+    <div class="error-code">500</div>
+    <div class="error-title">Something went wrong</div>
+
+    <div class="error-message">
+      The server encountered an unexpected condition that prevented it from
+      fulfilling your request.  
+      Please try again later or contact the system administrator.
+    </div>
+
+    <a href="/" class="home-btn">Go Back Home</a>
+  </div>
+
+</body>
+</html>
