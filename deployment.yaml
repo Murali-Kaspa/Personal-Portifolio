@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mydep
+  labels:
+    app: portfolio
+    env: dev
+spec:
+  replicas: 3
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: portfolio
+      env: dev
+  template:
+    metadata:
+      labels:
+        app: portfolio
+        env: dev
+    spec:
+      containers:
+        - name: portfolioimage
+          image: 381492065975.dkr.ecr.ap-south-1.amazonaws.com/personal-portfolio:1.0
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+                cpu: "1"
+                memory: "126Mi"
+            limits:
+              cpu: "4"
+              memory: "256Mi"
+

@@ -7,8 +7,8 @@ REPO="personal-portfolio"
 aws ecr get-login-password --region ${REGION} \
 	| docker login --username AWS \
 	--password-stdin ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com
-docker tag personal-portfolio:1.0 \
-       	${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${REPO}:1.0
+docker tag personal-portfolio:2.0 \
+       	${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${REPO}:2.0
 
-docker push ${ACCOUNT_ID}.dkr.ecr.ap-south-1.amazonaws.com/${REPO}:1.0
+docker push ${ACCOUNT_ID}.dkr.ecr.ap-south-1.amazonaws.com/${REPO}:2.0
 
