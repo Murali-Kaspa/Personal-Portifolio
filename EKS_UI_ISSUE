@@ -1,0 +1,43 @@
+Issue
+
+Sometimes, even after deploying Pods or Deployments, they are not visible in the EKS Console UI.
+
+Root Cause
+
+The IAM user or role used to log in to the AWS Console is not mapped in the Kubernetes aws-auth ConfigMap.
+
+In EKS, IAM authentication is separate from Kubernetes RBAC.
+If the IAM identity is not mapped, the console cannot display workloads, even though they are running.
+
+
+
+Step 1 — Get IAM User/Role ARN
+
+Example:
+
+arn:aws:iam::321*******:user/Justin_Murali
+
+Step 2 — Edit aws-auth ConfigMap
+
+Run:
+
+kubectl edit configmap aws-auth -n kube-system
+
+
+Add the IAM user under mapUsers:
+
+data:
+  mapRoles: |
+    - rolearn: arn:aws:iam::381492065975:role/eksctl-portfolio-cluster-nodegroup-NodeInstanceRole-iDMKaPdTbeKC
+      groups:
+        - system:bootstrappers
+        - system:nodes
+      username: system:node:{{EC2PrivateDNSName}}
+
+  mapUsers: |
+    - userarn: arn:aws:iam::38*******:user/<YOUR-IAM-USER>
+      username: admin
+      groups:
+        - system:masters
+
+Save and Exit and refresh in AWS console
